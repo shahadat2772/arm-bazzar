@@ -2,7 +2,7 @@ import React from "react";
 import "./Product.css";
 
 const Product = ({ product }) => {
-  const { id, img, price, action, name } = product;
+  const { img, price, action, name } = product;
   console.log(product);
   return (
     <div className="productCard col-3">

@@ -7,9 +7,7 @@ function App() {
   return (
     <div>
       <Header></Header>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <Shop></Shop>
-      </div>
+      <Shop></Shop>
     </div>
   );
 }

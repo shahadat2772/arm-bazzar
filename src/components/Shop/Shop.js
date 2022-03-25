@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./Shop.css";
 import Product from "./../Product/Product";
+import Cart from "../Cart/Cart";
 const Shop = () => {
   // Setting products
-  const [products, setProducts] = useState();
+  const [products, setProducts] = useState([]);
 
   //   Getting Products
   useEffect(() => {
@@ -15,16 +16,16 @@ const Shop = () => {
   //   console.log(products);
 
   return (
-    <div className="shopContainer row container px-0">
+    <div className="shopContainer ">
+      {/* Cart Container */}
+      <div className="cartContainer">
+        <Cart></Cart>
+      </div>
       {/* Products container */}
-      <div className="productContainer col-lg-10">
+      <div className="productContainer">
         {products.map((product) => (
           <Product product={product}></Product>
         ))}
-      </div>
-      {/* Cart Container */}
-      <div className="cartContainer col-lg-3">
-        <h1>Cart</h1>
       </div>
     </div>
   );
