@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import "./Shop.css";
 import Product from "./../Product/Product";
 import Cart from "../Cart/Cart";
+import Qna from "../QNA/Qna";
 const Shop = () => {
   // Setting products
   const [products, setProducts] = useState([]);
 
   //   Setting Cart items
   const [cart, setCart] = useState([]);
-  console.log(cart);
   //   Getting Products
   useEffect(() => {
     fetch("data.json")
@@ -44,15 +44,12 @@ const Shop = () => {
   const getRandomOne = () => {
     let id = randomID();
     let randomItem = cart.find((product) => product.id === id);
-    console.log("Random Clicked", randomID(), randomItem);
     if (randomItem) {
       setCart([randomItem]);
     } else {
       getRandomOne();
     }
   };
-
-  console.log(cart);
 
   //   Handle Choose Again BTN
   const chooseAgain = () => {
@@ -70,14 +67,17 @@ const Shop = () => {
         ></Cart>
       </div>
       {/* Products container */}
-      <div className="productContainer">
-        {products.map((product) => (
-          <Product
-            key={product.id}
-            addToCart={addToCart}
-            product={product}
-          ></Product>
-        ))}
+      <div>
+        <div className="productContainer">
+          {products.map((product) => (
+            <Product
+              key={product.id}
+              addToCart={addToCart}
+              product={product}
+            ></Product>
+          ))}
+        </div>
+        <Qna></Qna>
       </div>
     </div>
   );

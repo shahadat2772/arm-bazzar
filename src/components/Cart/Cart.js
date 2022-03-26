@@ -3,8 +3,6 @@ import CartItem from "../CartItem/CartItem";
 import "./Cart.css";
 
 const Cart = ({ cart, getRandomOne, chooseAgain }) => {
-  console.log(cart);
-
   return (
     <div className="cart">
       <h3 className="text-center">Added Items</h3>
