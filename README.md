@@ -1,8 +1,6 @@
-<!-- # Getting Started with Create React App -->
-
 # ARM BAZZAR
 
-Visit [ARM-BAZZAR](https://github.com/facebook/create-react-app)
+## Visit [ARM BAZZAR](https://frabjous-duckanoo-1b4f34.netlify.app/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

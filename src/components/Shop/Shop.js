@@ -77,6 +77,7 @@ const Shop = () => {
             ></Product>
           ))}
         </div>
+        {/* QNA Compo */}
         <Qna></Qna>
       </div>
     </div>
