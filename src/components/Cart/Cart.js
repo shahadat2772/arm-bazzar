@@ -2,20 +2,28 @@ import React from "react";
 import CartItem from "../CartItem/CartItem";
 import "./Cart.css";
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, getRandomOne, chooseAgain }) => {
   console.log(cart);
 
   return (
     <div className="cart">
       <h3 className="text-center">Added Items</h3>
-      {cart.map((item) => (
-        <CartItem key={item.id} item={item}></CartItem>
-      ))}
+      {/* Items Container */}
+      <div className="itemsContainer">
+        {cart.map((item) => (
+          <CartItem key={item.id} item={item}></CartItem>
+        ))}
+      </div>
+      {/* Cart Buttons */}
       <div className="CartButtons">
-        <button className="getRandomBtn">
+        <button
+          id="getRandomOneBtn"
+          onClick={() => getRandomOne()}
+          className="getRandomBtn"
+        >
           <p>Get Random One</p>
         </button>
-        <button className="chooseAgainBtn">
+        <button onClick={() => chooseAgain()} className="chooseAgainBtn">
           <p>Choose Again</p>
         </button>
       </div>

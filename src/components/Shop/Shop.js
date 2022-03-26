@@ -19,25 +19,55 @@ const Shop = () => {
   //   Handle add to cart BUTTON
   const addToCart = (selectedProduct) => {
     let newCart = [];
-
     const exists = cart.find((product) => product.id === selectedProduct.id);
-    if (exists) {
-      const rest = cart.filter((product) => product.id !== exists.id);
-      exists.quantity = exists.quantity + 1;
-      newCart = [...rest, exists];
+    if (cart.length < 4 || exists) {
+      if (exists) {
+        const rest = cart.filter((product) => product.id !== exists.id);
+        exists.quantity = exists.quantity + 1;
+        newCart = [...rest, exists];
+      } else {
+        selectedProduct["quantity"] = 1;
+        newCart = [...cart, selectedProduct];
+      }
+      setCart(newCart);
     } else {
-      selectedProduct["quantity"] = 1;
-      newCart = [...cart, selectedProduct];
+      alert("You don't wanna buy all the guns, do you?");
     }
+  };
 
-    setCart(newCart);
+  //   Random Number Generator
+  const randomID = () => {
+    return Math.floor(Math.random() * (12 - 1 + 1) + 1);
+  };
+
+  // Handle Random one BTN
+  const getRandomOne = () => {
+    let id = randomID();
+    let randomItem = cart.find((product) => product.id === id);
+    console.log("Random Clicked", randomID(), randomItem);
+    if (randomItem) {
+      setCart([randomItem]);
+    } else {
+      getRandomOne();
+    }
+  };
+
+  console.log(cart);
+
+  //   Handle Choose Again BTN
+  const chooseAgain = () => {
+    setCart([]);
   };
 
   return (
     <div className="shopContainer ">
       {/* Cart Container */}
       <div className="cartContainer">
-        <Cart cart={cart}></Cart>
+        <Cart
+          chooseAgain={chooseAgain}
+          getRandomOne={getRandomOne}
+          cart={cart}
+        ></Cart>
       </div>
       {/* Products container */}
       <div className="productContainer">

@@ -4,6 +4,7 @@
   border-radius: 8px;
   height: 400px;
   position: sticky;
+  top: 40px;
 }
 
 /* Cart Buttons */
@@ -29,6 +30,12 @@
   border: 0px;
   border-radius: 5px;
   padding: 5px 0px;
+}
+.getRandomBtn:hover {
+  color: gray;
+}
+.chooseAgainBtn:hover {
+  color: gray;
 }
 
 /* BrackPoint */
