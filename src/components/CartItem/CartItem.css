@@ -1,0 +1,33 @@
+/* Each cart itemsCSS */
+.cartItem img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.cartItem {
+  border: 2px solid rgba(117, 117, 117, 0.493);
+  margin: 5px 4px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0px 5px 0px 0px;
+}
+.cartItem p {
+  margin-bottom: 0;
+}
+
+.quantity {
+  margin-left: auto;
+}
+
+.itemDeleteBtn {
+  border: 0;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+.itemDeleteBtn:hover {
+  color: gray;
+}

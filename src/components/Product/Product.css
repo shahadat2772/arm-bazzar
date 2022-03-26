@@ -1,3 +1,4 @@
+/* Product CSS */
 .productCard {
   height: 480px;
   width: 290px;
@@ -17,6 +18,7 @@
   margin: 0px 10px;
 }
 
+/* Button STYLES */
 .addBtn {
   width: 100%;
   border: 0;

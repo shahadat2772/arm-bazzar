@@ -12,12 +12,6 @@
   grid-template-columns: 5fr 2fr;
 }
 
-/* .cartContainer {
-  padding-left: 20px;
-} */
-
-/* Responsiveness */
-
 @media only screen and (max-width: 415px) {
   .productContainer {
     grid-template-columns: 1fr;

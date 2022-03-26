@@ -29,6 +29,7 @@ const Shop = () => {
       selectedProduct["quantity"] = 1;
       newCart = [...cart, selectedProduct];
     }
+
     setCart(newCart);
   };
 
@@ -36,7 +37,7 @@ const Shop = () => {
     <div className="shopContainer ">
       {/* Cart Container */}
       <div className="cartContainer">
-        <Cart></Cart>
+        <Cart cart={cart}></Cart>
       </div>
       {/* Products container */}
       <div className="productContainer">

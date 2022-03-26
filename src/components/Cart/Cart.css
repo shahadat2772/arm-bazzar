@@ -1,3 +1,4 @@
+/* Cart CSS  */
 .cart {
   border: 2px solid rgba(117, 117, 117, 0.493);
   border-radius: 8px;
@@ -6,6 +7,7 @@
   top: 40px;
 }
 
+/* BrackPoint */
 @media only screen and (max-width: 415px) {
   .cart {
     margin: 20px 20px;
