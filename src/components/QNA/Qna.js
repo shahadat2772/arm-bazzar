@@ -6,6 +6,7 @@ const Qna = () => {
   return (
     <div className="qnaContainer">
       <div>
+        {/* Que-1 */}
         <h4 className="mb-3">Differences between STATE & PROPS?</h4>
         <Table striped bordered hover>
           <thead>
@@ -40,6 +41,7 @@ const Qna = () => {
         </Table>
       </div>
       <div>
+        {/* Que-2 */}
         <h4>How useState() Works?</h4>
         <p>
           The useState() function allows us to keep variables that could change.
