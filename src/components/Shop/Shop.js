@@ -31,7 +31,7 @@ const Shop = () => {
       }
       setCart(newCart);
     } else {
-      alert("You don't wanna buy all the guns, do you?");
+      alert("Slow down cow boy, four item at a time!");
     }
   };
 
@@ -42,12 +42,16 @@ const Shop = () => {
 
   // Handle Random one BTN
   const getRandomOne = () => {
-    let id = randomID();
-    let randomItem = cart.find((product) => product.id === id);
-    if (randomItem) {
-      setCart([randomItem]);
+    if (cart.length !== 0) {
+      let id = randomID();
+      let randomItem = cart.find((product) => product.id === id);
+      if (randomItem) {
+        setCart([randomItem]);
+      } else {
+        getRandomOne();
+      }
     } else {
-      getRandomOne();
+      alert("Hey cow boy, you must select item to get a random one!");
     }
   };
 
