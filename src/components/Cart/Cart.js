@@ -11,6 +11,14 @@ const Cart = ({ cart }) => {
       {cart.map((item) => (
         <CartItem key={item.id} item={item}></CartItem>
       ))}
+      <div className="CartButtons">
+        <button className="getRandomBtn">
+          <p>Get Random One</p>
+        </button>
+        <button className="chooseAgainBtn">
+          <p>Choose Again</p>
+        </button>
+      </div>
     </div>
   );
 };
