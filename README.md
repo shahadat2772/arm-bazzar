@@ -1,6 +1,6 @@
 # ARM BAZZAR
 
-## Visit [ARM BAZZAR](https://frabjous-duckanoo-1b4f34.netlify.app/)
+## Visit [ARM BAZZAR](https://chic-kitten-5fc5b1.netlify.app/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
